@@ -1,4 +1,4 @@
-
+// Esta clase para que cumpla con el SRP  debe tener una unica responsabilidad, por lo que esta clase busca solo tener la responsabilidad de manejar los datos del usuario
 
 public class Usuario {
 
