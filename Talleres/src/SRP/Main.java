@@ -1,3 +1,10 @@
+package SRP;
+
+import SRP.AutenticacionUsuario;
+import SRP.CalcularSalario;
+import SRP.CorreosElectronicos;
+import SRP.Usuario;
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -27,8 +34,6 @@ public class Main {
         CalcularSalario calcularSalario = new CalcularSalario();
         double salario = calcularSalario.calcularSalario(184,20000);
         System.out.println("Tu salario mensual sin contar horas extras fue: " + salario);
-
-
 
     }
 }
