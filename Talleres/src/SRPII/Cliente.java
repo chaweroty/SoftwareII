@@ -1,4 +1,5 @@
 package SRPII;
+//Esta clase para que cumpla con el SRP debe tener una unica responsabilidad, esta clase solo estructura que información debe tener el cliente
 
 public class Cliente {
     private String nombre;

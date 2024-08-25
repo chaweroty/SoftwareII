@@ -13,7 +13,8 @@ public class Main {
             System.out.println("2. Generar Factura");
             System.out.println("3. Enviar Factura por correo");
             System.out.println("4. Generar Reporte de Facturas");
-            System.out.println("5. Salir");
+            System.out.println("5. Enviar factura a la DIAN");
+            System.out.println("6. Salir");
             int opcion = scanner.nextInt();
             scanner.nextLine();
 
@@ -31,6 +32,9 @@ public class Main {
                     generarReporteFactura(facturas);
                     break;
                 case 5:
+                    enviarFacturaDian(facturas, scanner);
+                    break;
+                case 6:
                     System.out.println("Saliendo...");
                     return;
                 default:
@@ -111,10 +115,32 @@ public class Main {
             }
             System.out.println("Reporte de Facturas:");
             for (Factura factura : facturas) {
-                System.out.println("Factura #" + facturas.indexOf(factura) + 1 + " - Cliente: " + factura.getCliente().getNombre() + " - Monto: $" + factura.getValor());
+                System.out.println("Factura #" + (facturas.indexOf(factura) + 1) + " - Cliente: " + factura.getCliente().getNombre() + " - Monto: $" + factura.getValor());
             }
         }
+    private static void enviarFacturaDian(ArrayList<Factura> facturas, Scanner scanner) {
+        if (facturas.isEmpty()) {
+            System.out.println("No hay facturas disponibles.");
+            return;
+        }
+        System.out.println("Selecciona la factura que quieres enviar a la DIAN:");
+        for (int i = 0; i < facturas.size(); i++) {
+            System.out.println((i + 1) + ". Factura #" + (i + 1) + " - Cliente: " + facturas.get(i).getCliente().getNombre());
+        }
+        int seleccionFactura = scanner.nextInt();
+        scanner.nextLine();
 
+        if (seleccionFactura < 1 || seleccionFactura > facturas.size()) {
+            System.out.println("Selección no válida.");
+            return;
+        }
+        Factura factura = facturas.get(seleccionFactura - 1);
+        Correo email = new Correo();
+        email.enviarFacturaDian(factura);
+        System.out.println("Factura enviada a la DIAN exitosamente.");
     }
 
+
 }
+
+

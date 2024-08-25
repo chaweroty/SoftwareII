@@ -1,5 +1,5 @@
 package SRPII;
-
+//Esta clase para que cumpla con el SRP  debe tener una unica responsabilidad, esta clase solo estructura lo que debe tener toda factura
 public class Factura {
     private String fecha;
     private int id;
