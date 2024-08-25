@@ -2,12 +2,14 @@ package SRPII;
 
 public class Factura {
     private String fecha;
+    private int id;
     private String vendedor;
     private double valor;
     private Cliente cliente;
 
-    public Factura(String fecha, String vendedor, double valor, Cliente cliente) {
+    public Factura(String fecha, int id, String vendedor, double valor, Cliente cliente) {
         this.fecha = fecha;
+        this.id = id;
         this.vendedor = vendedor;
         this.valor = valor;
         this.cliente = cliente;
@@ -19,6 +21,14 @@ public class Factura {
 
     public void setFecha(String fecha) {
         this.fecha = fecha;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getVendedor() {
