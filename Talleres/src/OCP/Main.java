@@ -1,4 +1,4 @@
-package OPC;
+package OCP;
 /*
 La idea del OCP es que se pueda agregar nuevas funcionalidades a las clases si es requerido pero sin la necesidad de modificar el código que ya exista, este es el código refactorizado
  En el que identificamos la violación al OCP, en este caso son los if-else del código anterior, ya con esta estructura ocasionaba que cuando se deba agregar un nuevo tipo de envío se debía modificar
