@@ -139,8 +139,6 @@ public class Main {
         email.enviarFacturaDian(factura);
         System.out.println("Factura enviada a la DIAN exitosamente.");
     }
-
-
 }
 
 
