@@ -9,6 +9,21 @@ public abstract class Paquete {
         this.dimensiones = dimensiones;
     }
 
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public String getDimensiones() {
+        return dimensiones;
+    }
+
+    public void setDimensiones(String dimensiones) {
+        this.dimensiones = dimensiones;
+    }
 }
 
 

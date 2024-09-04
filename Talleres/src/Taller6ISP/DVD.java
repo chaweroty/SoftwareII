@@ -37,11 +37,18 @@ public class DVD implements LibreriaDVD{
 
     @Override
     public void prestar() {
-
+        if (stock > 0) {
+            stock--;
+            System.out.println("El DVD '" + nombre + "' ha sido prestado. Stock restante: " + stock);
+        } else {
+            System.out.println("No hay stock disponible para el DVD '" + nombre + "'.");
+        }
     }
 
     @Override
     public void devolver() {
-
+        stock++;
+        System.out.println("El DVD '" + nombre + "' ha sido devuelto. Stock actual: " + stock);
     }
 }
+

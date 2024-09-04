@@ -1,6 +1,6 @@
 package Taller6_I_ISP;
 
-public class PaqueteGrande extends Paquete{
+public class PaqueteGrande extends Paquete implements IPaqueteGrande{
     private float volumen;
     private String medioDeTransporte;
 
@@ -28,5 +28,18 @@ public class PaqueteGrande extends Paquete{
     }
 
 
+    @Override
+    public double calcularCostoEnvioGrande() {
+        double costoBase = 50.0;
+        double costoPeso = this.getPeso() * 2.0;
+        double costoVolumen = this.volumen * 1.5;
 
+        if (this.medioDeTransporte.equalsIgnoreCase("aéreo")) {
+            costoBase += 20.0;
+        } else if (this.medioDeTransporte.equalsIgnoreCase("terrestre")) {
+            costoBase += 10.0;
+        }
+
+        return costoBase + costoPeso + costoVolumen;
+    }
 }
