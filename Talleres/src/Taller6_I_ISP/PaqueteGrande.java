@@ -28,8 +28,5 @@ public class PaqueteGrande extends Paquete{
     }
 
 
-    @Override
-    public double calcularCosto() {
-        return 0;
-    }
+
 }

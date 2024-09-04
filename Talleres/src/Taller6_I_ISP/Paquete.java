@@ -9,7 +9,6 @@ public abstract class Paquete {
         this.dimensiones = dimensiones;
     }
 
-    public abstract double calcularCosto();
 }
 
 

@@ -28,8 +28,5 @@ public class PaquetePeligroso extends Paquete{
         this.embalajeEspecial = embalajeEspecial;
     }
 
-    @Override
-    public double calcularCosto() {
-        return 0;
-    }
+
 }

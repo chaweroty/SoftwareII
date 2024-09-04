@@ -15,8 +15,6 @@ public class PaquetePequeño extends Paquete{
         this.valorDeclarado = valorDeclarado;
     }
 
-    @Override
-    public double calcularCosto() {
-        return 0;
-    }
+
+
 }
