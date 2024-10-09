@@ -9,7 +9,7 @@ public class Main {
      */
     public static void main(String[] args) {
         Producto producto1 = new Producto("Airpods", 850000, 1);
-        Producto producto2 = new Producto("Apple Watch", 1300000, 3);
+        Producto producto2 = new Producto("Apple Watch", 1300000, 5);
 
         Cliente cliente = new Cliente("Sebastián", "Calle 9A, Manizales, Caldas");
 
