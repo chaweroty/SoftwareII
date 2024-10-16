@@ -1,6 +1,7 @@
 package Taller12.Taller12Indireccion;
 
-public class Usuario     private String nombre;
+public class Usuario{
+    private String nombre;
         private String identificacion;
         private IServicioNotificaciones servicioNotificaciones;
 
