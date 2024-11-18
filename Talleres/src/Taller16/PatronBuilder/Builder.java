@@ -1,7 +1,6 @@
 package Taller16.PatronBuilder;
 import java.util.HashSet;
 import java.util.Set;
-
 public class Builder {
     String nombre;
     int edad;

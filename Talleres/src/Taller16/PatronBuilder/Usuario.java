@@ -1,6 +1,5 @@
 package Taller16.PatronBuilder;
 import java.util.Set;
-
 public class Usuario {
     private String nombre;
     private int edad;

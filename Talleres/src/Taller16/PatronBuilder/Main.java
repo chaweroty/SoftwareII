@@ -1,7 +1,6 @@
 package Taller16.PatronBuilder;
 
 public class Main {
-
     public static void main(String[] args) {
 
         Usuario usuario1 = new Builder()
